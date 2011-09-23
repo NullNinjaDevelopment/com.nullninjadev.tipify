@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, Tipify!</string>
+    <string name="app_name">Tipify</string>
+    <string name="num_guests">Number of Guests:</string>
+    <string name="serv_quality">Service Quality:</string>
+    <string name="bill_total">Bill Total:</string>
+    <string name="bill_deductions">Bill Deductions:</string>
+    <string name="tax">Tax:</string>
+    <string name="loading">loading...</string>
+    <string name="tip_rate">Tip rate:</string>
+    <string name="total_tip">Total tip:</string>
+    <string name="individual_tip">Individual tip:</string>
+    <string name="total">Total (Tip and Bill):</string>
+    <string name="tip_tailoring">Tip Tailoring</string>
+    <string name="configuration">Configuration</string>
+    <string name="min_tip">Minimum Tip Percentage</string>
+    <string name="max_tip">Maximum Tip Percentage</string>
+    <string name="tip_range_description">The tip range is the percentage range for selecting tips. Defaults are provided but can be changed.</string>
+    <string name="tip_base_description">The tip base is used to determine the tip amount. It includes the bill, deductions (optional!) and tax (optional!). Deductions include discounts, refunds, etc.</string>
+    <string name="include_tax">Include Tax?</string>
+    <string name="include_deductions">Include Deductions?</string>
+    <string name="btn_toggle">ON</string>
+</resources>

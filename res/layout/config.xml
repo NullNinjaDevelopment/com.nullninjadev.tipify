@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:weightSum="8">
+    
+    <TextView
+    	android:layout_width="fill_parent"
+    	android:layout_height="0dp"
+    	android:layout_weight="2"
+    	android:gravity="center"
+    	android:text="@string/tip_range_description"/>
+    
+    <LinearLayout
+    	android:orientation="horizontal"
+    	android:layout_width="fill_parent"
+    	android:layout_height="0dp"
+    	android:layout_weight="1"
+    	android:weightSum="2">
+    
+    	<TextView
+    		android:layout_width="0dp"
+    		android:layout_height="fill_parent"
+    		android:layout_weight="1"
+    		android:gravity="center"
+    		android:text="@string/min_tip"/>
+    	
+    	<EditText
+    		android:id="@+id/txtbox_min_tip"
+    		android:numeric="decimal"
+    		android:layout_width="0dp"
+    		android:layout_height="fill_parent"
+    		android:layout_weight="1"/>
+    </LinearLayout>
+    
+    <LinearLayout
+    	android:orientation="horizontal"
+    	android:layout_width="fill_parent"
+    	android:layout_height="0dp"
+    	android:layout_weight="1"
+    	android:weightSum="2">
+    
+    	<TextView
+    		android:layout_width="0dp"
+    		android:layout_height="fill_parent"
+    		android:layout_weight="1"
+    		android:gravity="center"
+    		android:text="@string/max_tip"/>
+    	
+    	<EditText
+    		android:id="@+id/txtbox_max_tip"
+    		android:numeric="decimal"
+    		android:layout_width="0dp"
+    		android:layout_height="fill_parent"
+    		android:layout_weight="1"/>
+    </LinearLayout>
+    
+    <TextView
+    	android:layout_width="fill_parent"
+    	android:layout_height="0dp"
+    	android:layout_weight="2"
+    	android:gravity="center"
+    	android:text="@string/tip_base_description"/>
+    	
+    <LinearLayout
+    	android:orientation="horizontal"
+    	android:layout_width="fill_parent"
+    	android:layout_height="0dp"
+    	android:layout_weight="1"
+    	android:weightSum="2">
+    
+    	<TextView
+    		android:layout_width="0dp"
+    		android:layout_height="fill_parent"
+    		android:layout_weight="1"
+    		android:text="@string/include_tax"/>
+    	
+    	<ToggleButton android:id="@+id/btn_tax_toggle"
+            android:text="@string/btn_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"/>
+    </LinearLayout>
+    
+    <LinearLayout
+    	android:orientation="horizontal"
+    	android:layout_width="fill_parent"
+    	android:layout_height="0dp"
+    	android:layout_weight="1"
+    	android:weightSum="2">
+    
+    	<TextView
+    		android:layout_width="0dp"
+    		android:layout_height="fill_parent"
+    		android:layout_weight="1"
+    		android:text="@string/include_deductions"/>
+    	
+    	<ToggleButton android:id="@+id/btn_deduction_toggle"
+            android:text="@string/btn_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"/>
+    	
+    </LinearLayout>
+</LinearLayout>

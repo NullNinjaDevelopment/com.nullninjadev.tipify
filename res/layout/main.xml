@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:weightSum="9">
+    
+    <LinearLayout
+    	android:orientation="horizontal"
+    	android:layout_width="fill_parent"
+    	android:layout_height="0dp"
+    	android:layout_weight="1"
+    	android:weightSum="2">
+    	
+    	<TextView
+    		android:layout_width="0dp"
+    		android:layout_height="fill_parent"
+    		android:gravity="center"
+    		android:layout_weight="1"
+    		android:text="@string/num_guests"/>
+    	
+    	<EditText
+    		android:id="@+id/txtbox_num_guests"
+    		android:numeric="integer"
+    		android:layout_width="0dp"
+    		android:layout_height="fill_parent"
+    		android:layout_weight="1"
+    		android:maxLength="2"/>
+    
+    </LinearLayout>
+
+    <LinearLayout
+    	android:orientation="horizontal"
+    	android:layout_width="fill_parent"
+    	android:layout_height="0dp"
+    	android:layout_weight="1"
+    	android:weightSum="2">
+    	
+    	<TextView
+    		android:layout_width="0dp"
+    		android:layout_height="fill_parent"
+    		android:gravity="center"
+    		android:layout_weight="1"
+    		android:text="@string/serv_quality"/>
+    		
+    	<LinearLayout
+    		android:orientation="vertical"
+    		android:layout_width="0dp"
+    		android:layout_weight="1"
+    		android:weightSum="1"
+    		android:layout_height="wrap_content"
+    		android:gravity="center">
+    		
+    		<RatingBar
+	    		android:id="@+id/ratingbar_quality"
+	    		style="@style/customRatingBar"
+	    		android:gravity="center_vertical"
+	    		android:layout_weight="1"
+	    		android:layout_width="wrap_content"
+	    		android:layout_height="wrap_content"
+	    		android:numStars="5"
+	    		android:rating="2.5"
+	    		android:stepSize="0.5"/>
+    	</LinearLayout>
+    </LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/lin"
+    	android:orientation="horizontal"
+    	android:layout_width="fill_parent"
+    	android:layout_height="0dp"
+    	android:layout_weight="1"
+    	android:weightSum="2">
+    	
+    	<TextView
+    		android:layout_width="0dp"
+    		android:layout_height="fill_parent"
+    		android:gravity="center"
+    		android:layout_weight="1"
+    		android:text="@string/bill_total"/>
+    	
+     	<com.nullninjadev.tipify.CurrencyEditText
+     		android:id="@+id/txtbox_total"
+     		android:numeric="decimal"
+     		android:layout_width="0dp"
+     		android:layout_height="fill_parent"
+     		android:layout_weight="1"/>
+    	
+    </LinearLayout>
+    
+    <LinearLayout
+    	android:orientation="horizontal"
+    	android:layout_width="fill_parent"
+    	android:layout_height="0dp"
+    	android:layout_weight="1"
+    	android:weightSum="2">
+    	
+    	<TextView
+    		android:layout_width="0dp"
+    		android:layout_height="fill_parent"
+    		android:gravity="center"
+    		android:layout_weight="1"
+    		android:text="@string/bill_deductions"/>
+    	
+    	<EditText
+    		android:id="@+id/txtbox_deductions"
+    		android:numeric="decimal"
+    		android:layout_width="0dp"
+    		android:layout_height="fill_parent"
+    		android:layout_weight="1"/>
+    	
+    </LinearLayout>
+    
+    	<LinearLayout
+    	android:orientation="horizontal"
+    	android:layout_width="fill_parent"
+    	android:layout_height="0dp"
+    	android:layout_weight="1"
+    	android:weightSum="2">
+    	
+    	<TextView
+    		android:layout_width="0dp"
+    		android:layout_height="fill_parent"
+    		android:gravity="center"
+    		android:layout_weight="1"
+    		android:text="@string/tax"/>
+    	
+    	<EditText
+    		android:id="@+id/txtbox_tax"
+    		android:numeric="decimal"
+    		android:layout_width="0dp"
+    		android:layout_height="fill_parent"
+    		android:layout_weight="1"/>
+    	
+    </LinearLayout>
+    
+	<LinearLayout
+    	android:orientation="horizontal"
+    	android:layout_width="fill_parent"
+    	android:layout_height="0dp"
+    	android:layout_weight="1"
+    	android:weightSum="2">
+    	
+    	<TextView
+    		android:layout_width="0dp"
+    		android:layout_height="fill_parent"
+    		android:gravity="center"
+    		android:layout_weight="1"
+    		android:text="@string/tip_rate"/>
+    	
+    	<TextView
+    		android:id="@+id/txt_tip_rate"
+    		android:layout_width="0dp"
+    		android:layout_height="fill_parent"
+    		android:gravity="center"
+    		android:layout_weight="1"
+    		android:text="@string/loading"/>
+    	
+    </LinearLayout>
+	
+	<LinearLayout
+    	android:orientation="horizontal"
+    	android:layout_width="fill_parent"
+    	android:layout_height="0dp"
+    	android:layout_weight="1"
+    	android:weightSum="2">
+    	
+    	<TextView
+    		android:layout_width="0dp"
+    		android:layout_height="fill_parent"
+    		android:gravity="center"
+    		android:layout_weight="1"
+    		android:text="@string/total_tip"/>
+    	
+    	<TextView
+    		android:id="@+id/txt_total_tip"
+    		android:layout_width="0dp"
+    		android:layout_height="fill_parent"
+    		android:gravity="center"
+    		android:layout_weight="1"
+    		android:text="@string/loading"/>
+    	
+    </LinearLayout>
+    
+    <LinearLayout
+    	android:orientation="horizontal"
+    	android:layout_width="fill_parent"
+    	android:layout_height="0dp"
+    	android:layout_weight="1"
+    	android:weightSum="2">
+    	
+    	<TextView
+    		android:layout_width="0dp"
+    		android:layout_height="fill_parent"
+    		android:gravity="center"
+    		android:layout_weight="1"
+    		android:text="@string/individual_tip"/>
+    	
+    	<TextView
+    		android:id="@+id/txt_indiv_tip"
+    		android:layout_width="0dp"
+    		android:layout_height="fill_parent"
+    		android:gravity="center"
+    		android:layout_weight="1"
+    		android:text="@string/loading"/>
+    	
+    </LinearLayout>
+    
+    <LinearLayout
+    	android:orientation="horizontal"
+    	android:layout_width="fill_parent"
+    	android:layout_height="0dp"
+    	android:layout_weight="1"
+    	android:weightSum="2">
+    	
+    	<TextView
+    		android:layout_width="0dp"
+    		android:layout_height="fill_parent"
+    		android:gravity="center"
+    		android:layout_weight="1"
+    		android:text="@string/total"/>
+    	
+    	<TextView
+    		android:id="@+id/txt_total"
+    		android:layout_width="0dp"
+    		android:layout_height="fill_parent"
+    		android:gravity="center"
+    		android:layout_weight="1"
+    		android:text="@string/loading"/>
+    	
+    </LinearLayout>
+</LinearLayout>
