@@ -1,11 +1,8 @@
 package com.nullninjadev.tipify;
 
 import android.content.Context;
-import android.text.Editable;
 import android.util.AttributeSet;
 import android.view.KeyEvent;
-import android.view.View;
-import android.view.View.OnKeyListener;
 import android.widget.EditText;
 
 public class CurrencyEditText extends EditText /*implements OnKeyListener*/{
@@ -29,11 +26,11 @@ public class CurrencyEditText extends EditText /*implements OnKeyListener*/{
 //		setKeyListener(DigitsKeyListener.getInstance(false, true));
 	}
 
-	private boolean isValidKeyCode(int keyCode){
-		for(int key: mKeyCodes){
-			if(keyCode == key)
-				return true;
-		}
-		return false;
-	}
+//	private boolean isValidKeyCode(int keyCode){
+//		for(int key: mKeyCodes){
+//			if(keyCode == key)
+//				return true;
+//		}
+//		return false;
+//	}
 }

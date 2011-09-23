@@ -31,24 +31,7 @@ public class DataHelper {
 	public static void calculateTotalTip(){
 		mTip = (mBillTotal - (ComponentInclusion.isDeductionIncluded() ? 0 : mDeductions)
 				- (ComponentInclusion.isTaxIncluded() ? 0 : mTax)) * mTipRate;
-		
-//		if(ComponentInclusion.isDeductionIncluded()){
-//			if(ComponentInclusion.isTaxIncluded()){
-//				mTip = mBillTotal 
-//			}
-//			else{
-//				
-//			}
-//		}
-//		else{
-//			if(ComponentInclusion.isTaxIncluded()){
-//				
-//			}
-//			else{
-//				
-//			}
-//		}
-		
+		// WHY THE SHIT ARE YOU DOING THIS?
 	}
 	
 	public static void calculateTips(Context context){
