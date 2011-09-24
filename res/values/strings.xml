@@ -21,4 +21,8 @@
     <string name="include_tax">Include Tax?</string>
     <string name="include_deductions">Include Deductions?</string>
     <string name="btn_toggle">ON</string>
+	<string name="tip_calculator">Tip Calculator</string>
+	<string name="instructions_title">Instructions</string>
+	<string name="instructions_part1">On the tip calculator screen, enter the number of guests splitting the tip. Next enter the bill total, the total deductions on the bill (coupons, insect-related discounts, etc.), then enter the amount of tax applied to the bill. You can also specify the quality of service by designating a number of stars 0-5 (5 stars being great service). The quality of service determines the tip rate which is a range between the minimum and maximum tip values specified on the Configuration screen.</string>
+	<string name="instructions_part2">You can use the menu button to view the Tip Tailoring screen or the Configuration screen. The Configuration screen will allow you to choose the min/max tip rates and whether or not the deductions and tax are included in the tip calculations. The Tip Tailoring screen allows you to assign certain amounts of the tip to certain guests.</string>
 </resources>

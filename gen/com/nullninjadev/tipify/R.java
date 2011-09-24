@@ -20,12 +20,14 @@ public final class R {
     }
     public static final class id {
         public static final int btn_deduction_toggle=0x7f070003;
+        public static final int btn_instructions=0x7f07000f;
         public static final int btn_tax_toggle=0x7f070002;
-        public static final int configuration=0x7f070010;
+        public static final int btn_tip_calculator=0x7f07000e;
+        public static final int configuration=0x7f070012;
         public static final int lin=0x7f070006;
-        public static final int pbar_container=0x7f07000e;
+        public static final int pbar_container=0x7f070010;
         public static final int ratingbar_quality=0x7f070005;
-        public static final int tip_tailoring=0x7f07000f;
+        public static final int tip_tailoring=0x7f070011;
         public static final int txt_indiv_tip=0x7f07000c;
         public static final int txt_tip_rate=0x7f07000a;
         public static final int txt_total=0x7f07000d;
@@ -39,8 +41,10 @@ public final class R {
     }
     public static final class layout {
         public static final int config=0x7f030000;
-        public static final int main=0x7f030001;
-        public static final int tip_tailor=0x7f030002;
+        public static final int instructions=0x7f030001;
+        public static final int main=0x7f030002;
+        public static final int opening=0x7f030003;
+        public static final int tip_tailor=0x7f030004;
     }
     public static final class menu {
         public static final int tipify_menu=0x7f060000;
@@ -55,6 +59,9 @@ public final class R {
         public static final int include_deductions=0x7f040013;
         public static final int include_tax=0x7f040012;
         public static final int individual_tip=0x7f04000a;
+        public static final int instructions_part1=0x7f040017;
+        public static final int instructions_part2=0x7f040018;
+        public static final int instructions_title=0x7f040016;
         public static final int loading=0x7f040007;
         public static final int max_tip=0x7f04000f;
         public static final int min_tip=0x7f04000e;
@@ -62,6 +69,7 @@ public final class R {
         public static final int serv_quality=0x7f040003;
         public static final int tax=0x7f040006;
         public static final int tip_base_description=0x7f040011;
+        public static final int tip_calculator=0x7f040015;
         public static final int tip_range_description=0x7f040010;
         public static final int tip_rate=0x7f040008;
         public static final int tip_tailoring=0x7f04000c;

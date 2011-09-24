@@ -79,7 +79,7 @@
     		android:layout_weight="1"
     		android:text="@string/bill_total"/>
     	
-     	<com.nullninjadev.tipify.CurrencyEditText
+     	<EditText
      		android:id="@+id/txtbox_total"
      		android:numeric="decimal"
      		android:layout_width="0dp"

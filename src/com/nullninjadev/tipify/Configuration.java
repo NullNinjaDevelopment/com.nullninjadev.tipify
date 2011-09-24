@@ -1,7 +1,5 @@
 package com.nullninjadev.tipify;
 
-import java.text.NumberFormat;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -44,14 +42,23 @@ public class Configuration extends Activity {
         return super.onKeyDown(keyCode, event);
     }
     
+    /**
+     * Returns a String in 0-100% format without the percent symbol
+     * @param percent is the decimal percentage to be transformed
+     * @return percent as a String in the 0-100% format without the percent symbol
+     */
     public String getPercentInstanceWithoutSymbol(float percent){
     	percent *= 100;
     	return Float.toString(percent);
     }
     
+    /**
+     * Initializes the EditTexts, TextViews and ToggleButtons associated with this Activity.
+     */
     private void initUI(){
     	et_minTipRate = (EditText)findViewById(R.id.txtbox_min_tip);
     	et_minTipRate.setText(getPercentInstanceWithoutSymbol(DataHelper.getMinTipRate()));
+    	et_minTipRate.setSelectAllOnFocus(true);
     	et_minTipRate.addTextChangedListener(new TextWatcher(){
 			@Override
 			public void afterTextChanged(Editable arg0) {
@@ -70,6 +77,7 @@ public class Configuration extends Activity {
     	
     	et_maxTipRate = (EditText)findViewById(R.id.txtbox_max_tip);
     	et_maxTipRate.setText(getPercentInstanceWithoutSymbol(DataHelper.getMaxTipRate()));
+    	et_maxTipRate.setSelectAllOnFocus(true);
     	et_maxTipRate.addTextChangedListener(new TextWatcher(){
 			@Override
 			public void afterTextChanged(Editable arg0) {

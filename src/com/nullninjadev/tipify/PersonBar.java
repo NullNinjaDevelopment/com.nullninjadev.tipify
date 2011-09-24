@@ -5,7 +5,6 @@ import android.text.Editable;
 import android.text.InputType;
 import android.text.TextWatcher;
 import android.view.Gravity;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
@@ -18,7 +17,12 @@ public class PersonBar extends LinearLayout{
 	private SeekBar sb;
 	private TextView tv;
 	private Person mPerson;
-	
+
+	/**
+	 * 
+	 * @param context is the handle to the Activity which created this PersonBar
+	 * @param person is the Person object associated with this PersonBar
+	 */
 	PersonBar(Context context, Person person){
 		super(context);
 		mContext = context;
@@ -26,6 +30,9 @@ public class PersonBar extends LinearLayout{
 		initUI();
 	}
 	
+	/**
+	 * Initializes the components used by PersonBar.
+	 */
 	private void initUI(){
 		/* initialize LinearLayout params */
 		this.setWeightSum(3);
@@ -33,18 +40,8 @@ public class PersonBar extends LinearLayout{
 		
 		/* initialize EditText params */
 		et = new EditText(mContext);
-//		et.setInputType(InputType.TYPE_CLASS_NUMBER);
 		et.setInputType(InputType.TYPE_TEXT_VARIATION_PERSON_NAME);
 		et.setSelectAllOnFocus(true);
-//		et.setOnFocusChangeListener(new OnFocusChangeListener(){
-//			@Override
-//			public void onFocusChange(View v, boolean hasFocus) {
-//				if(!hasFocus){
-//					mPerson.setName(et.getText().toString());
-////					DataHelper.calculateTips(mContext);
-//				}
-//			}
-//		});
 		et.addTextChangedListener(new TextWatcher(){
 			@Override
 			public void afterTextChanged(Editable arg0) {
@@ -69,7 +66,6 @@ public class PersonBar extends LinearLayout{
 			public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
 				mPerson.setWeight(progress);
 				DataHelper.calculateTips(PersonBar.mContext);
-//				((TipTailor) PersonBar.mContext).updateUI();
 			}
 			@Override
 			public void onStartTrackingTouch(SeekBar seekBar) {}

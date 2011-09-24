@@ -12,6 +12,10 @@ public class TipTailor extends Activity {
 	private static TipTailor ref;
 	private LinearLayout pBarLayout;
 	
+	/**
+	 * Creates a reference to this Activity if it doesn't already exist and returns it.
+	 * @return the reference to this Activity
+	 */
 	public static TipTailor getInstance(){
 		if(ref == null) ref = new TipTailor();
 		return ref;
@@ -23,14 +27,14 @@ public class TipTailor extends Activity {
         setContentView(R.layout.tip_tailor);
         ref = this;
         mBars = new Vector<PersonBar>();
-//        Vector<Person> people = DataHelper.getPeople();
-//        for(Person person : people){
-//        	mBars.add(new PersonBar(this, person));
-//        }
         initUI(); // Add the necessary PersonBars to the UI
         DataHelper.calculateTips(this);
     }
     
+    /**
+     * Initializes all the PersonBars based on the current list of Persons held by
+     * DataHelper.
+     */
     private void initUI(){
     	pBarLayout = (LinearLayout)findViewById(R.id.pbar_container);
     	
@@ -42,36 +46,15 @@ public class TipTailor extends Activity {
     	}
     }
     
+    /**
+     * Updates the tip amounts displayed.
+     */
     public void updateUI(){
     	DecimalFormat myFormatter = (DecimalFormat) DecimalFormat.getCurrencyInstance();
 		Vector<Person> people = DataHelper.getPeople();
 		
     	for(int i = 0; i < mBars.size(); i++){
-    		// "$###,###.##" or put "$" in front of the text!
-//    		System.out.println("START DEBUG");
-//    		System.out.println("mBars.size() = " + mBars.size() + " at iteration " + i);
- 
-//    		System.out.println("peeps.size() = " + peeps.size() + " at iteration " + i);
-//    		for(int j = 0; j < peeps.size(); j++){
-//    			Person peep = peeps.get(j);
-//    			System.out.println(peep.getName());
-//    		}
-//    		System.out.println("END DEBUG");
-//    		Person peep = peeps.get(i);
     		mBars.get(i).getTipTextView().setText(myFormatter.format(people.get(i).getTip()));
-//    		mBars.get(i).getTipTextView().setText("hi");
     	}
     }
-
-    /* TESTER!
-    @Override
-    public boolean onTouchEvent(MotionEvent event){
-    	for(Person person : DataHelper.getPeople()){
-    		if(person.getName() != null){
-    		System.out.println("TOUCHED! " + person.getName());
-    		}
-    	}
-    	return true;
-    }
-    */
 }

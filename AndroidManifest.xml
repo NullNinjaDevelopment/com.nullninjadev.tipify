@@ -6,16 +6,20 @@
     <uses-sdk android:minSdkVersion="3" />
 
     <application android:icon="@drawable/icon" android:label="@string/app_name">
-        <activity android:name=".Tipify"
+        <activity android:name=".TipifyOpeningScreen"
                   android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+		<activity android:name=".Tipify"
+				  android:label="@string/app_name"/>
+		<activity android:name=".InstructionsScreen"
+				  android:label="@string/instructions_title"/>
 		<activity android:name=".Configuration"
-		          android:label = "@string/configuration"/>
+		          android:label="@string/configuration"/>
 		<activity android:name=".TipTailor"
-		          android:label = "@string/tip_tailoring"/>
+		          android:label="@string/tip_tailoring"/>
     </application>
 </manifest>

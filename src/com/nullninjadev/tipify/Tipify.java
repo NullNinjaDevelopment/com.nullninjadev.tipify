@@ -29,9 +29,7 @@ public class Tipify extends Activity {
 	protected TextView tv_tipAndBillTotal;
 	
 	protected RatingBar rb_servQuality;
-	/* TEMPORARY! */
-//	public LinearLayout LL;
-	
+
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -42,7 +40,11 @@ public class Tipify extends Activity {
         DataHelper.initVars();
         updateUI();
     }
-    
+
+    /**
+     * Initializes the TextViews, EditTexts and the RatingBar that are displayed on
+     * the Tipify screen.
+     */
     private void initVars(){
     	tv_tipRate = (TextView)findViewById(R.id.txt_tip_rate);
     	tv_totalTip = (TextView)findViewById(R.id.txt_total_tip);
@@ -80,7 +82,6 @@ public class Tipify extends Activity {
     	et_billTotal.addTextChangedListener(new TextWatcher(){
     		@Override
     		public void afterTextChanged(Editable s) {
-//    			System.out.println(et_billTotal.length());
     			if(et_billTotal.length() >= 1)
     				DataHelper.setBillTotal(Float.parseFloat((et_billTotal.getText().toString())));
     			else
@@ -93,15 +94,7 @@ public class Tipify extends Activity {
     				int after) {}
     		@Override
     		public void onTextChanged(CharSequence s, int start, int before,
-    				int count) {
-    			
-//    			String input = et_billTotal.getText().toString();
-//    			if(input.length() > 0){
-//    				Float billTotal = Float.parseFloat(input);
-//    				DataHelper.setBillTotal(billTotal);
-//    				updateUI();
-//    			}
-    		}	
+    				int count) {}
         });
     	
     	et_deductions.addTextChangedListener(new TextWatcher(){
@@ -176,16 +169,26 @@ public class Tipify extends Activity {
     	}
     }
     
+    /**
+     * Starts up the TipTailoring Activity.
+     */
     private void loadTipTailoring(){
     	Intent intent = new Intent(this, TipTailor.class);
     	startActivity(intent);
     }
     
+    /**
+     * Starts up the Configuration Activity.
+     */
     private void loadConfiguration(){
     	Intent intent = new Intent(this, Configuration.class);
     	startActivity(intent);
     }
     
+    /**
+     * Updates the display according to the current tip rate, total tip
+     * individual tip and tip/bill total. 
+     */
     public void updateUI(){
     	tv_tipRate.setText(NumberFormat.getPercentInstance().format(DataHelper.getTipRate()));
     	tv_totalTip.invalidate();

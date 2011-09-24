@@ -13,9 +13,18 @@ public class ComponentInclusion {
 	private static boolean mDeductionIncluded = true;
 	private static boolean mTaxIncluded = false;
 	
+	/**
+	 * Returns whether or not the tax should be included in tip calculations.
+	 * @return whether or not the tax should be included in tip calculations
+	 */
 	public static boolean isTaxIncluded(){
 		return mTaxIncluded;
 	}
+	
+	/**
+	 * Returns whether or not the deductions should be included in tip calculations.
+	 * @return whether or not the deductions should be included in tip calculations
+	 */
 	public static boolean isDeductionIncluded(){
 		return mDeductionIncluded;
 	}

@@ -8,18 +8,25 @@ public class DataHelper {
 	private static Vector<Person> people;
 	private static float mTip = 0;
 	private static float mTipRate = 0.20f;
-	private static float mMinTipRate = 0f;
-	private static float mMaxTipRate = 1f;
+	private static float mMinTipRate = 0.1f;
+	private static float mMaxTipRate = 0.3f;
 	private static int mNumGuests = 1; // total number of guests, initially 1
 	private static float mBillTotal = 0; // bill total dollar amount, initially 0
 	private static float mDeductions = 0;
 	private static float mTax = 0;
 	
+	/**
+	 * Initializes the Person Vector and sets the number of guests to 1 by default.
+	 */
 	public static void initVars(){
 		people = new Vector<Person>();
 		setNumGuests(1);
 	}
 	
+	/**
+	 * Lets the program get the current list of people at any time.
+	 * @return The list of Person objects that are splitting the tip.
+	 */
 	public static Vector<Person> getPeople(){
 		if(people == null){
 			people = new Vector<Person>();
@@ -28,12 +35,21 @@ public class DataHelper {
 		return people;
 	}
 	
+	/**
+	 * Takes the bill total, deductions and tax into account and calculates the total tip
+	 * to be displayed on the Tipify screen.
+	 */
 	public static void calculateTotalTip(){
-		mTip = (mBillTotal - (ComponentInclusion.isDeductionIncluded() ? 0 : mDeductions)
+		mTip = (mBillTotal + (ComponentInclusion.isDeductionIncluded() ? mDeductions : 0)
 				- (ComponentInclusion.isTaxIncluded() ? 0 : mTax)) * mTipRate;
-		// WHY THE SHIT ARE YOU DOING THIS?
 	}
 	
+	/**
+	 * Calculates the appropriate tips based on the weight given to each Person. Updates
+	 * the TipTailor screen whenever this method is called within that Activity.
+	 * @param context gives the method a handle on the Activity that calls it so that
+	 * it knows if it should update the appropriate UI.
+	 */
 	public static void calculateTips(Context context){
 		calculateTotalTip();
 		int sumWeights = 0;
@@ -48,6 +64,10 @@ public class DataHelper {
 		}
 	}
 	
+	/**
+	 * Adds or removes guests to/from the Person Vector when the number of
+	 * guests changes on the Tipify screen.
+	 */
 	public static void adjustGuestList(){
 		if(mNumGuests >= people.size()){
 			for(int i = people.size(); i < mNumGuests; i++){
@@ -61,6 +81,10 @@ public class DataHelper {
 		}
 	}
 
+	/**
+	 * Sets the number of guests who are splitting the tip.
+	 * @param numGuests the number of guests who are splitting the tip
+	 */
 	public static void setNumGuests(int numGuests){
 		mNumGuests = numGuests;
 		adjustGuestList();
