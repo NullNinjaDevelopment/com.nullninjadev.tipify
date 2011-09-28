@@ -36,6 +36,7 @@ public class Tipify extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
+        this.setTitle("Tipify - Tip Calculator");
         this.initVars();
         DataHelper.initVars();
         updateUI();

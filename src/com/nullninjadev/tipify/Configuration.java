@@ -24,6 +24,8 @@ public class Configuration extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.config);
         
+        this.setTitle("Tipify - Configuration");
+        
         initUI();
     }
 

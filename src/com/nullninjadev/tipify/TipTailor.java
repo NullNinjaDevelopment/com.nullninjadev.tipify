@@ -27,6 +27,7 @@ public class TipTailor extends Activity {
         setContentView(R.layout.tip_tailor);
         ref = this;
         mBars = new Vector<PersonBar>();
+        this.setTitle("Tipify - Tip Tailor");
         initUI(); // Add the necessary PersonBars to the UI
         DataHelper.calculateTips(this);
     }
